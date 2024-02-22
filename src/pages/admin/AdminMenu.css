@@ -1,0 +1,50 @@
+.admin-menu {
+    display: flex;
+    flex-direction: column;
+    /* background: linear-gradient(to right, skyblue, pink); */
+    width: 250px;
+    /* height: 70vh; */
+}
+
+.admin-menu a {
+    display: block;
+    padding: 10px;
+    margin: 5px 0;
+    text-decoration: none;
+    color: #1B1212;
+    transition: background-color 0.3s ease-in, color 0.3s ease-in;
+}
+
+.nav-link {
+    border-bottom: none;
+    /* Remove the bottom border */
+}
+
+.product-dropdown {
+    cursor: pointer;
+    display: block;
+    padding: 10px;
+    margin: 5px 0;
+    text-decoration: none;
+    color: #1B1212;
+    transition: background-color 0.3s ease-in, color 0.3s ease-in;
+}
+
+.divider {
+    height: 1px;
+    background-color: #ddd;
+    margin: 5px 0;
+}
+
+.admin-menu a:hover {
+    background: rgb(85, 83, 84);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .admin-menu {
+        width: 150px;
+    }
+
+
+}

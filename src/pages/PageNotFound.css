@@ -1,0 +1,13 @@
+.pagenotfound {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    background: linear-gradient(120deg, pink, skyblue);
+}
+
+.gobackbutton {
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 10px;
+}

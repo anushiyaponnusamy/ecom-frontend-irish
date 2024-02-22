@@ -1,0 +1,10 @@
+ .buttonContainerStyle {
+     margin-top: 10px;
+     width: 100%;
+     display: flex;
+     justify-content: space-evenly;
+ }
+
+ /* .bg-color-ecom {
+     background: '#1B1212';
+ } */

@@ -1,0 +1,33 @@
+/* UserList.css */
+
+.user-item {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    transition: transform 0.3s ease-in-out;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: poppins;
+}
+
+.user-item:hover {
+    transform: scale(1.05);
+    background-color: wheat;
+    color: black;
+}
+
+/* Media query for screens smaller than or equal to 600px (adjust the breakpoint as needed) */
+@media (max-width: 600px) {
+    .user-item {
+        font-size: 12px;
+        /* Adjust font size for smaller screens */
+        height: auto;
+        /* Allow the user item's height to adjust based on content */
+    }
+}

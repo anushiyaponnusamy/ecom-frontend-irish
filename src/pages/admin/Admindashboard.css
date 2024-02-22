@@ -1,0 +1,65 @@
+/* YourStyles.css */
+
+/* Common styles for both desktop and mobile */
+.layout-container {
+    display: flex;
+    height: 80vh;
+    background: linear-gradient(to right, skyblue, pink);
+}
+
+.sidebar {
+    width: 300px;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+.sidebar-open {
+    width: 300px;
+}
+
+.sidebar-close {
+    width: 0;
+}
+
+.sidebar-icon {
+    display: none;
+    /* Hide the icon by default */
+}
+
+.content {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    overflow: auto;
+}
+
+.hamburger-icon {
+    display: none;
+    /* Hide the icon by default */
+}
+
+.content-inner {
+    padding: 20px;
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+    .sidebar-close {
+        display: none;
+    }
+
+
+    .sidebar-icon {
+        display: flex;
+        justify-content: flex-end;
+        padding: 20px;
+        cursor: pointer;
+    }
+
+    .hamburger-icon {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+}

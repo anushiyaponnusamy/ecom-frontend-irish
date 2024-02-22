@@ -1,0 +1,99 @@
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.product-card {
+    width: 150px;
+    /* Adjust width for responsive design */
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+    margin: 20px;
+}
+
+.product-card:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.product-front {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* padding: 13px 13px 0px 13px */
+}
+
+.product-front img {
+    width: 100%;
+    height: 100px;
+    /* max-height: 200px; */
+    object-fit: contain;
+}
+
+.product-details {
+    padding: 13px 13px 0px 13px;
+    color: rgb(170, 151, 151)
+}
+
+.product-title {
+    color: rgb(109, 139, 110);
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.product-description {
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+.product-price {
+    font-size: 16px;
+    font-weight: 700;
+    /* color: ; */
+    text-align: right;
+    display: flex;
+    padding: 3px;
+    justify-content: space-between;
+}
+
+/* Style the product-icons container (positioned on top of the image) */
+.product-icons {
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Style the edit and delete icons */
+.product-icons .edit-icon,
+.product-icons .delete-icon {
+    color: black;
+    font-size: 10px;
+    cursor: pointer;
+    margin-right: 2px;
+    /* Add spacing between the icons */
+    background-color: rgba(255, 255, 255, 0.7);
+    /* Background color with opacity */
+    border-radius: 50%;
+    /* Create a circular shape for the icons */
+    padding: 2px;
+    /* Add padding to the icons for better clickability */
+    display: inline-block;
+    /* Ensure inline display to respect spacing */
+    transition: background-color 0.3s ease;
+    /* Add a transition effect */
+}
+
+@media (max-width: 768px) {
+    .product-card {
+        width: calc(44% - 20px);
+        /* Adjust width for mobile view */
+    }
+
+    .product-container {
+        justify-content: center;
+    }
+}

@@ -1,0 +1,19 @@
+.about-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* Ensures the content is vertically centered on the page */
+    background: linear-gradient(120deg, pink, skyblue);
+}
+
+.about-page-content {
+    background-color: rgba(255, 192, 203, 0.9);
+    /* Light pink background with some transparency */
+    padding: 20px;
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
