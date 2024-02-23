@@ -38,6 +38,7 @@ const RegisterPage = () => {
         localStorage.setItem('mobile', response.data.mobile);
         localStorage.setItem('userId', response.data._id);
         localStorage.setItem('address', response.data.address);
+        localStorage.setItem('cartCount', response?.data?.cartCount);
         localStorage.setItem('profilePhoto', response?.data?.profilePhoto);
         setAuth({
             ...auth,

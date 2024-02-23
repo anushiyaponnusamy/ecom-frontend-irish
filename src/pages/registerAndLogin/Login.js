@@ -31,6 +31,7 @@ const LoginPage = () => {
         localStorage.setItem('userId', response.data._id);
         localStorage.setItem('address', response.data.address);
         localStorage.setItem('profilePhoto', response?.data?.profilePhoto);
+        localStorage.setItem('cartCount', response?.data?.cartCount);
         dispatch(PathAction.setIncrementCartCount(response?.data?.cartCount));
         setAuth({
             ...auth,
