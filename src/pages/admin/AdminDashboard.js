@@ -10,7 +10,6 @@ import './Admindashboard.css';
 import Layout from '../../components/layout/layout';
 import ProductView from './ProductView';
 import ProductEdit from './ProductEdit';
-import AllOrders from './AllOrders';
 import { useMediaQuery } from '@mui/material';
 
 const AdminDashboard = () => {
@@ -46,7 +45,7 @@ const AdminDashboard = () => {
                     />
                     {/* : <MdViewSidebar onClick={toggleSidebar} />} */}
                 </Grid>
-                <Grid item xs={9} className="content">
+                <Grid item xs={9} className="content" >
                     <div className="content-inner">
                         {selectedMenu === 'category' && <CreateCategory />}
                         {selectedMenu === 'product-create' && <CreateProduct handleRedirect={handleMenuClick} />}

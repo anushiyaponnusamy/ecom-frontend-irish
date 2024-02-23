@@ -27,7 +27,7 @@ const ProductView = ({ handleRedirect, handleEdit }) => {
 
     return (
         <div >
-            <Button variant="contained" className='bg-color-ecom' style={{ backgroundColor: 'black', color: 'white' }} onClick={() => handleRedirect("product-create")}>
+            <Button variant="contained" className='bg-color-ecom' style={{ backgroundColor: '#333333', color: 'white' }} onClick={() => handleRedirect("product-create")}>
                 <AiOutlinePlus size={20} style={{ color: 'white', marginRight: '5px' }} />
                 Create Product
             </Button>
@@ -35,7 +35,7 @@ const ProductView = ({ handleRedirect, handleEdit }) => {
             <div className="product-container">
 
                 {products.map((product, index) => (
-                    <div key={index} className="product-card">
+                    <div key={index} className="product-card1">
                         <div className="product-icons">
                             <span className="edit-icon" onClick={() => { handleEdit(product._id); handleRedirect("product-edit") }} >
                                 <AiOutlineEdit size={12} />
@@ -53,7 +53,7 @@ const ProductView = ({ handleRedirect, handleEdit }) => {
                         </div>
                         <div className="product-back">
                             <div className="product-price">
-                                <p>Rs.{product.price}</p>
+                                <p style={{ marginBottom: 0, fontWeight: 600 }}>Rs.{product.price}</p>
                             </div>
                         </div>
                     </div>

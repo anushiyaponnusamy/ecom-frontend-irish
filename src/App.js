@@ -21,10 +21,8 @@ import CreateCategory from "./pages/admin/CreateCategory";
 import CreateProduct from "./pages/admin/CreateProduct";
 import UserList from "./pages/admin/UserList";
 import ProductView from "./pages/admin/ProductView";
-import AllOrders from "./pages/admin/AllOrders";
 import CartPage from "./pages/user/cart";
 import SearchPage from "./pages/search";
-import OrdersPage from "./pages/user/ordersOfUserId";
 import WishlistPage from "./pages/user/wishlist";
 // import BuyNow from "./pages/user/buyNowPage";
 import Chats from "./pages/chat/chats";
@@ -40,8 +38,6 @@ const App = () => {
           <Route path="cart" element={<CartPage />} />
           <Route path="address" element={<AddressForm />} />
           <Route path="search" element={<SearchPage />} />
-          {/* <Route path="buynow/:id" element={<BuyNow />} /> */}
-          <Route path="orders" element={<OrdersPage />} />
           <Route path="profile-edit" element={<ProfileEdit />} />
         </Route>
         <Route path="/dashboard" element={<PrivateRoute />}>
@@ -53,7 +49,6 @@ const App = () => {
           <Route path="admin/users" element={<UserList />} />
           <Route path="admin/create-product" element={<CreateProduct />} />
           <Route path="admin/products" element={<ProductView />} />
-          <Route path="admin/allorders" element={<AllOrders />} />
         </Route>
 
         <Route path="/forget-password" element={<Forgetpassword />} />

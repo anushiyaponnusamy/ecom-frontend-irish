@@ -3,18 +3,20 @@
 /* Common styles for both desktop and mobile */
 .layout-container {
     display: flex;
-    height: 80vh;
-    background: linear-gradient(to right, skyblue, pink);
+    min-height: 80vh;
+    background-color: #f9f9f9;
+    /* Light gray background */
 }
 
 .sidebar {
-    width: 300px;
-    background-color: #f0f0f0;
+    width: 200px;
+    background-color: #ff7e5f;
+    /* Vibrant orange sidebar */
     overflow: hidden;
 }
 
 .sidebar-open {
-    width: 300px;
+    /* width: 300px; */
 }
 
 .sidebar-close {
@@ -30,7 +32,7 @@
     flex: 1;
     background-color: #ffffff;
     padding: 20px;
-    overflow: auto;
+    overflow: auto;background: linear-gradient(to right, #feb47b, #ff7e5f);
 }
 
 .hamburger-icon {
@@ -48,6 +50,12 @@
         display: none;
     }
 
+    .sidebar {
+        width: 300px;
+        background-color: #ff7e5f;
+        /* Vibrant orange sidebar */
+        overflow: hidden;
+    }
 
     .sidebar-icon {
         display: flex;
@@ -62,4 +70,24 @@
         justify-content: space-between;
         cursor: pointer;
     }
+}
+
+/* Additional Styles for Enhanced Vibrancy */
+.sidebar ul li {
+    padding: 10px 20px;
+    color: #ffffff;
+    /* White text color for sidebar items */
+    border-bottom: 1px solid #f0f0f0;
+    /* Light gray border between sidebar items */
+}
+
+.sidebar ul li:hover {
+    background-color: #ff986d;
+    /* Lighter shade of orange on hover */
+    cursor: pointer;
+}
+
+.sidebar ul li.active {
+    background-color: #ff4d00;
+    /* Darker shade of orange for active sidebar item */
 }

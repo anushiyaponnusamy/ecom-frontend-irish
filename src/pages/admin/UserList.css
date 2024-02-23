@@ -10,24 +10,19 @@
     justify-content: center;
     height: 150px;
     transition: transform 0.3s ease-in-out;
-    color: black;
+    color: #ffffff;
+    /* White text color for better visibility */
     font-size: 14px;
     font-weight: bold;
     font-family: poppins;
+    background: linear-gradient(120deg, #ff7e5f, #feb47b);
+    /* Vibrant gradient background */
 }
 
 .user-item:hover {
     transform: scale(1.05);
-    background-color: wheat;
-    color: black;
-}
-
-/* Media query for screens smaller than or equal to 600px (adjust the breakpoint as needed) */
-@media (max-width: 600px) {
-    .user-item {
-        font-size: 12px;
-        /* Adjust font size for smaller screens */
-        height: auto;
-        /* Allow the user item's height to adjust based on content */
-    }
+    background-color: #ffffff;
+    /* White background color on hover */
+    color: #000000;
+    /* Black text color on hover */
 }

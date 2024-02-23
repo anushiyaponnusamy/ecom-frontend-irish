@@ -97,7 +97,7 @@ const SingleProduct = ({ product, type }) => {
                     backgroundImage: `url(${product.photo})`, // Set the image as background
                     backgroundSize: 'cover',
                     backgroundRepeat: 'no-repeat',
-                    backgroundPosition: 'center center',
+                    backgroundPosition: 'center center', borderRadius: '9px 9px 0px 0px'
                 }}
             >
                 {/* Position the heart icon within the container */}

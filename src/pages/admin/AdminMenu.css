@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     /* background: linear-gradient(to right, skyblue, pink); */
-    width: 250px;
+    /* width: 250px; */
     /* height: 70vh; */
 }
 
@@ -37,7 +37,7 @@
 }
 
 .admin-menu a:hover {
-    background: rgb(85, 83, 84);
+    background:linear-gradient(to right, #d4553e, #e58d64);
     color: white;
 }
 

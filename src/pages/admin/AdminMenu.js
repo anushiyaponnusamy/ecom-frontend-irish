@@ -37,11 +37,7 @@ const AdminMenu = ({ handleMenuClick, handleClose }) => {
                 activeClassName="active">
                 Users
             </NavLink>
-            <NavLink
-                className='nav-link' onClick={() => handleMenuClick("orders")}
-                activeClassName="active">
-                Orders
-            </NavLink>
+
 
         </div >
     );

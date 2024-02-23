@@ -104,13 +104,13 @@ const Header = () => {
                                         HappyShoppy!
                                     </Link>
                                 </ListItem>
-                                {auth?.user?.userId && <ListItem ListItem button onClick={() => { navigate('/dashboard/user') }}>
+                                {auth?.user?.userId && <ListItem ListItem button >
                                     {auth?.user?.profilePhoto ? (
-                                        <Avatar alt={auth.user.userName} src={auth.user.profilePhoto} />
+                                        <Avatar alt={auth.user.userName} src={auth.user.profilePhoto} onClick={() => { navigate('/dashboard/user') }} />
                                     ) : (
-                                        <Avatar>{auth.user?.userName ? auth.user?.userName[0]?.toUpperCase() : ""}</Avatar>
+                                        <Avatar onClick={() => { navigate('/dashboard/user') }}>{auth.user?.userName ? auth.user?.userName[0]?.toUpperCase() : ""}</Avatar>
                                     )}
-                                    <h3 style={{ fontWeight: '500', margin: "0px 0px 3px 5px" }}>{auth?.user?.userName}</h3>
+                                    <h3 style={{ fontWeight: '500', margin: "0px 0px 3px 5px" }} onClick={() => { navigate('/dashboard/user') }}>{auth?.user?.userName}</h3>
                                 </ListItem>}
                                 <ListItem button>
                                     <NavLink className="nav-link " to="/">
@@ -218,9 +218,9 @@ const Header = () => {
                                 ) : (
                                     <>
                                         <div className="nav-item dropdown">
-                                            <span className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" onClick={() => { navigate('/dashboard/user') }}>
+                                            <span className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" >
 
-                                                <span className="username">{auth?.user?.userName}</span>
+                                                <span className="username" onClick={() => { navigate('/dashboard/user') }}>{auth?.user?.userName}</span>
 
                                             </span>
                                             <div className="dropdown-menu dropdown-menu-end">

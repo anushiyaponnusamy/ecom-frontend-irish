@@ -3,8 +3,6 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(120deg, pink, skyblue);
-    /* Adjust as needed */
 }
 
 .profile-container {
@@ -12,10 +10,11 @@
     box-sizing: border-box;
     margin: 20px;
     border-radius: 10px;
-    background: linear-gradient(120deg, pink, skyblue);
+    background: linear-gradient(120deg, pink, skyblue); /* Same vibrant gradient background as body */
     display: flex;
     align-items: center;
     flex-direction: column;
+    color: #ffffff; /* Set text color to white for better visibility */
 }
 
 .profile-info {

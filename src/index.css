@@ -4,8 +4,18 @@
   box-sizing: border-box;
   font-family: 'poppins';
   font-weight: 400;
+  
 }
-
+body {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  /* Vibrant gradient background */
+  margin: 0;
+  /* Remove default margin */
+  padding: 0;
+  /* Remove default padding */
+  font-family: Arial, sans-serif;
+  /* Optionally, set a common font-family */
+}
 .textAlignCenter {
   text-align: center;
 }

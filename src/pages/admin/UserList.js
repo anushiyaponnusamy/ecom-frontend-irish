@@ -18,12 +18,13 @@ const UserList = () => {
 
     return (
         <Grid container spacing={2}>
+            {/* <h5 style={{ textAlign: 'center' }}>User List</h5> */}
             {users?.length &&
                 users.map((user, index) => (
                     <Grid item xs={12} sm={6} key={index}>
                         <div className="user-item">
-                            <div>Name: {user?.userName} </div>
-                            <div>Email: {user?.email}</div>
+                            <div>{user?.userName} </div>
+                            <div>{user?.email}</div>
                             <div>Mobile: {user?.mobile}</div>
                         </div>
                     </Grid>
