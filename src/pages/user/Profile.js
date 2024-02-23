@@ -35,7 +35,6 @@ function Profile() {
     useEffect(() => {
         getUserdetails(userId).then((response) => {
             if (response?.data) {
-                console.log("getUserdetails", response?.data)
                 setUserDetails({
                     userName: response?.data?.userName,
                     email: response?.data?.email,
@@ -46,7 +45,6 @@ function Profile() {
             }
         })
     }, [])
-    console.log("userDetails", userDetails)
     return (
         <Layout title='Profile'>
             <div className='profile-wrapper'>  <div className="profile-container" style={{ display: "flex", }}>

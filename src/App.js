@@ -25,7 +25,6 @@ import CartPage from "./pages/user/cart";
 import SearchPage from "./pages/search";
 import WishlistPage from "./pages/user/wishlist";
 // import BuyNow from "./pages/user/buyNowPage";
-import Chats from "./pages/chat/chats";
 const App = () => {
   return (
     <>
@@ -33,7 +32,6 @@ const App = () => {
       <Routes>
         <Route path="/" element={<PrivateRoute />}>
           <Route path="/" element={<HomePage />} />
-          <Route path="chats" element={<Chats />} />
           <Route path="wishlist" element={<WishlistPage />} />
           <Route path="cart" element={<CartPage />} />
           <Route path="address" element={<AddressForm />} />

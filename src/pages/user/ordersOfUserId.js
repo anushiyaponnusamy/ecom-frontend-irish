@@ -12,7 +12,6 @@ const OrdersPage = () => {
     useEffect(() => {
         getAllOrdersByUserId(userId).then((response) => {
             if (response.data.length > 0) {
-                console.log(response.data)
                 setOrders(response.data)
             }
         })

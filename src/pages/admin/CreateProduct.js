@@ -34,12 +34,12 @@ const FormComponent = ({ handleRedirect }) => {
 
     const handleChange = (event) => {
         const { name, value } = event.target;
-        console.log(name, value)
+
         setProduct({ ...product, [name]: value })
     };
 
     const handlePhotoChange = (event) => {
-        console.log(event.target.files[0])
+
         const img = event.target.files[0]
         uploadImage(img).then((response) => {
             setProduct({ ...product, photo: response.data })

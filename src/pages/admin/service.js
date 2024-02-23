@@ -6,7 +6,7 @@ const headers = {
     headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
-        'Authorization': `Bearer ${accessToken}`
+        'Authorization': `Bearer ${accessToken || localStorage.getItem('token')}`
     },
 };
 //product

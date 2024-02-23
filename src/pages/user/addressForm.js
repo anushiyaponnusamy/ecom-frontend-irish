@@ -30,7 +30,6 @@ const AddressForm = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(formData)
         if (formData.city === "" && formData.state === "" && formData.street === "" && formData.zip === "") {
             toast.error("missing field")
             return

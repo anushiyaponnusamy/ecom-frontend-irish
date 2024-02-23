@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useAuth } from "../../context/auth";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import axios from "axios";
 import config from "../../config/config";
 import Spinner from "../Spinner";
@@ -9,7 +9,7 @@ const AdminRoute = () => {
     const [ok, setOk] = useState(false);
     const [apiExecuted, setApiExecuted] = useState(false);
     const accessToken = localStorage.getItem("token");
-    console.log(accessToken)
+
     const headers = {
         headers: {
             Accept: "application/json",
@@ -17,7 +17,11 @@ const AdminRoute = () => {
             'Authorization': `Bearer ${accessToken}`
         },
     };
+    const navigate = useNavigate()
     useEffect(() => {
+        if (localStorage.getItem('role') !== 'admin') {
+            navigate('/')
+        }
         const authCheck = async () => {
             try {
                 const res = await axios.get(config.REACT_APP_API + '/auth/admin-auth', headers);

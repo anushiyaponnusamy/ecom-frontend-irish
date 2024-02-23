@@ -12,7 +12,7 @@ const CartPage = () => {
     useEffect(() => {
         getAllCartProducts(userId).then((response) => {
             if (response.data.length > 0) {
-                console.log(response.data)
+
                 setCartProducts(response.data)
             }
         })

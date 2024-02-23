@@ -48,7 +48,6 @@ const LoginPage = () => {
     }
     useEffect(() => {
         if (auth?.token) {
-            console.log("roken", localStorage.getItem('token'))
             navigate('/');
         }
     }, [auth?.token, navigate]);

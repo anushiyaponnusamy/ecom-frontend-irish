@@ -22,7 +22,7 @@ const CreateCategoryModal = (props) => {
     const { open, handleClose, isEdit, categoryDetails, fetchCategories } = props;
     const [categoryName, setCategoryName] = useState('');
     const handleCreateCategory = () => {
-        console.log("categoryName")
+
         createCategory(categoryName).then((response) => {
 
             if (response.data) {

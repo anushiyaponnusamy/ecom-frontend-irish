@@ -40,13 +40,14 @@ const Header = () => {
         localStorage.removeItem('role');
         localStorage.removeItem('mobile');
         localStorage.removeItem('userId');
+        localStorage.removeItem('cartCount');
         navigate('/login');
     };
     const handleDropdownChange = (event) => {
         setSelectedValue(event);
         setShowDropdown(false);
     };
-    console.log("auth", auth.user)
+    console.log("auth", auth.user, cartCount)
     useEffect(() => {
         if (!auth?.user?.userName) {
             if (
@@ -122,11 +123,11 @@ const Header = () => {
                                         Cart({cartCount})
                                     </NavLink>
                                 </ListItem>
-                                    {/* <ListItem button>
-                                        <NavLink className="nav-link " to="/orders">
-                                            My Orders
+                                    <ListItem button>
+                                        <NavLink className="nav-link " to="/wishlist">
+                                            Wishlist
                                         </NavLink>
-                                    </ListItem> */}
+                                    </ListItem>
                                 </>}
                                 {!auth?.user?.userId ? (
                                     <>

@@ -36,7 +36,6 @@ const Forgetpassword = () => {
         isPasswordValid()
     }, [password])
     const canResetPassword = useMemo(() => {
-        console.log("passwordValid, question, emailId", passwordValid, question, emailId)
         return passwordValid && question !== '' && emailId !== '';
     }, [passwordValid, question, emailId]);
     const handleLogin = async (e) => {

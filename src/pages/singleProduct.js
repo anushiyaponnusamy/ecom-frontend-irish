@@ -69,7 +69,7 @@ const SingleProduct = ({ product, type }) => {
     }
     useEffect(() => {
         checkCart(types, product, userId).then((response) => {
-            console.log("check cart", response)
+
             if (response.data.productId) {
                 setAddedToCart(true)
             }
@@ -78,7 +78,7 @@ const SingleProduct = ({ product, type }) => {
             }
         });
         checkWishlist(types, product, userId).then((response) => {
-            console.log(response)
+
             if (response.data._id) {
                 setLiked(true)
             }

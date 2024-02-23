@@ -45,7 +45,6 @@ const ProfileEditForm = () => {
     };
 
     const handlePhotoChange = (event) => {
-        console.log(event.target.files[0])
         const img = event.target.files[0]
         uploadImage(img).then((response) => {
             setFormState({ ...formState, profilePhoto: response.data })
@@ -61,7 +60,6 @@ const ProfileEditForm = () => {
             toast.error("No changes");
             return;
         }
-        console.log("formState", formState)
         try {
             const response = await axios.post(config.REACT_APP_API + '/auth/updateUserDetails', { userName, mobile, profilePhoto, address }, {
                 headers: {

@@ -9,8 +9,8 @@ const ProductView = ({ handleRedirect, handleEdit }) => {
         deleteProduct(id).then((response) => {
             if (response.data.deletedCount === 1)
                 getApi()
-            else
-                console.log("undeleted")
+
+
 
         })
     }

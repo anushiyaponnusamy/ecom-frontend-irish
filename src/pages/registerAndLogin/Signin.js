@@ -30,7 +30,29 @@ const RegisterPage = () => {
     const clearErrorMessage = () => {
         setErrorMessage('');
     };
-
+    const setAllLocalStorageValues = (response) => {
+        localStorage.setItem('token', response.data.token);
+        localStorage.setItem('userName', response.data.userName);
+        localStorage.setItem('email', response.data.email);
+        localStorage.setItem('role', response.data.role);
+        localStorage.setItem('mobile', response.data.mobile);
+        localStorage.setItem('userId', response.data._id);
+        localStorage.setItem('address', response.data.address);
+        localStorage.setItem('profilePhoto', response?.data?.profilePhoto);
+        setAuth({
+            ...auth,
+            user: {
+                userId: response.data._id,
+                userName: response.data.userName,
+                email: response.data.email,
+                role: response.data.role,
+                mobile: response.data.mobile,
+                address: response.data.address,
+                profilePhoto: response?.data?.profilePhoto,
+                cartCount: response.data.cartCount
+            }, token: response.data.token
+        })
+    }
     const handleRegister = async () => {
         try {
             const response = await registerUser(email, password, username, mobileNumber, question);
@@ -41,27 +63,9 @@ const RegisterPage = () => {
             } else if (response.data === 'mobileNumber already exists') {
                 setErrorMessage('mobileNumber already exists')
             } else {
+                setAllLocalStorageValues(response)
 
-                localStorage.setItem('token', response.data.token);
-                localStorage.setItem('userName', response.data.userName);
-                localStorage.setItem('email', response.data.email);
-                localStorage.setItem('role', response.data.role);
-                localStorage.setItem('mobile', response.data.mobile);
-                localStorage.setItem('userId', response.data._id);
-                setAuth({
-                    ...auth,
-                    user: {
-                        userId: response.data._id,
-                        userName: response.data.userName,
-                        email: response.data.email,
-                        role: response.data.role,
-                        mobile: response.data.mobile,
-                        address: response.data.address,
-                        profilePhoto: response?.data?.profilePhoto, cartCount: response.data.cartCount
-                    }, token: response.data.token
-                })
-                if (localStorage.getItem('token'))
-                    setTimeout(navigate('/'), 2000)
+
             }
         } catch (error) {
             console.error(error);
@@ -98,7 +102,11 @@ const RegisterPage = () => {
             isPasswordValid();
         }
     }, [password]);
-
+    useEffect(() => {
+        if (auth?.token) {
+            navigate('/');
+        }
+    }, [auth?.token, navigate]);
     return (
         <Layout title="Sign Up | TickTick">
             <div className="register-page-container">

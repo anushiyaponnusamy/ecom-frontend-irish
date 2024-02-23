@@ -15,7 +15,7 @@ const Spinner = ({ path }) => {
         localStorage.removeItem('role');
         localStorage.removeItem('mobile');
         localStorage.removeItem('userId');
-
+        localStorage.removeItem('cartCount');
         navigate('/login');
     };
     useEffect(() => {

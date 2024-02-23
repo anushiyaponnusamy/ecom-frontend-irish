@@ -40,7 +40,6 @@ const ProductEdit = ({ handleRedirect, productId }) => {
     };
 
     const handlePhotoChange = (event) => {
-        console.log(event.target.files[0])
         const img = event.target.files[0]
         uploadImage(img).then((response) => {
             setProduct({ ...product, photo: response.data })

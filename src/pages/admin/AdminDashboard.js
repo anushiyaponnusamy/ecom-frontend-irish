@@ -11,14 +11,16 @@ import Layout from '../../components/layout/layout';
 import ProductView from './ProductView';
 import ProductEdit from './ProductEdit';
 import { useMediaQuery } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../context/auth';
 
 const AdminDashboard = () => {
-
+    const navigate = useNavigate()
     const mobileView = useMediaQuery("(max-width:768px)");
     const [selectedMenu, setSelectedMenu] = useState('category');
     const [sideBarOpen, setSideBarOpen] = useState(true)
     const [productId, setProductId] = useState("")
-
+    const [auth, setAuth] = useAuth()
     const handleMenuClick = (menu) => {
         setSelectedMenu(menu);
     };
@@ -29,6 +31,10 @@ const AdminDashboard = () => {
         setProductId(id)
     }
     useEffect(() => {
+        if (auth?.user?.role === 'user') {
+
+            navigate('/')
+        }
         // Close the sidebar initially on mobile
         if (mobileView) {
             setSideBarOpen(false);
@@ -56,7 +62,8 @@ const AdminDashboard = () => {
 
                     </div>
                 </Grid>
-            </Grid></Layout>
+            </Grid>
+        </Layout>
     );
 }
 
